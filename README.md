@@ -1,0 +1,1 @@
+# apicurio-registry-operator-install-examples
