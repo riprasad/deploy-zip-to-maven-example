@@ -1,27 +1,19 @@
 # Apicurio Registry Installation and Example Files
 
-## Configuration
-
-This project uses [Kustomize](https://kustomize.io/) to configure the following installation details:
-
-* Installation namespace
-* Operator image name
-* Registry image names
-
-Update those details according to each product release.
-
 ## How to Install the Operator
 
-Create a project with the name defined in the `namespace` field in `install/kustomization.yaml`. The default is `apicurio-registry`.
+Create a project for the installation, e.g., `apicurio-registry`.
 
 ```
 oc new-project <NAMESPACE>
 ```
 
-Apply the Resources located in the `install/` folder:
+Set the namespace in `install/cluster_role_binding.yaml`.
+
+Apply the files located in the `install/` folder:
 
 ```
-oc apply -k ./install/
+oc apply -f install/
 ```
 
 ## How to Install the Registry
